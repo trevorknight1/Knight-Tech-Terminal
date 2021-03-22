@@ -45,9 +45,10 @@ read -ep " " varname
                   apt -y install python2.7 python-pip
                   pip2 install -r requirements.txt
                   
-
-                  cp Knight-Tech-Terminal/bin/alias.sh .bash_aliases
+                  apt -y install dos2unix
+                  cp ./Knight-Tech-Terminal/bin/alias.sh .bash_aliases
                   dos2unix ./bash_aliases
+                  chmod 777 .bashrc
                   echo "./Knight-Tech-Terminal/main.sh" >> .bashrc
                   chmod 777 .bashrc
                   clear
