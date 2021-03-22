@@ -1,0 +1,6 @@
+pwd 
+pwd 
+computers 
+pwd 
+exit 
+exit 

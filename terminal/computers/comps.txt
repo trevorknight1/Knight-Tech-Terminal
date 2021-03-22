@@ -1,0 +1,1 @@
+{"DESKTOP-TBT8JFD": {"Dev": "ssh -i devKey.pem ubuntu@ec2-3-16-112-35.us-east-2.compute.amazonaws.com"}}
