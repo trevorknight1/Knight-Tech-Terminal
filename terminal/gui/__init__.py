@@ -1,3 +1,3 @@
 
-import terminal.GUI.exit_footer
-import terminal.GUI.header
+import terminal.gui.exit_footer
+import terminal.gui.header

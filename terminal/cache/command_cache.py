@@ -7,7 +7,7 @@ import json
 def isalias(input):
 
       dir = os.path.dirname(__file__)
-      aliasfile = os.path.join(dir, '../Alias/alias.txt')
+      aliasfile = os.path.join(dir, '../alias/alias.txt')
       with open(aliasfile) as json_file:
             aliases = json.load(json_file)
       new_st = input.strip()
@@ -22,7 +22,7 @@ cache_empty = term.yellow('Nothing in the Cache')
 
 dir = os.path.dirname(__file__)
 input_file = os.path.join(dir, 'commands.txt')  # change filename here
-out_file = os.path.join(dir, '../CMD_OP/cmd.txt')
+out_file = os.path.join(dir, '../cmd_op/cmd.txt')
 commands = []
 
 try:

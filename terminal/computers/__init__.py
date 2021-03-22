@@ -1,2 +1,2 @@
-import terminal.Computers.computer
-import terminal.Computers.new_computer
+import terminal.computers.computer
+import terminal.computers.new_computer

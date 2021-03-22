@@ -1,2 +1,2 @@
-import terminal.CMD_OP.get_cmd
-import terminal.CMD_OP.iscd
+import terminal.cmd_op.get_cmd
+import terminal.cmd_op.iscd

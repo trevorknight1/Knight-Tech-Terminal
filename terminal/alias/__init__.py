@@ -1,3 +1,3 @@
-import terminal.Alias.alias
-import terminal.Alias.isalias
-import terminal.Alias.new_alias
+import terminal.alias.alias
+import terminal.alias.isalias
+import terminal.alias.new_alias

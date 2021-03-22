@@ -1,2 +1,2 @@
-import terminal.Cache.Command_Cache
-import terminal.Cache.Create_Command_Cache
+import terminal.cache.command_cache
+import terminal.cache.create_command_cache

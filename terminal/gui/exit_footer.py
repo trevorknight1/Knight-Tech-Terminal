@@ -7,7 +7,7 @@ term = blessings.Terminal()
 
 try:
       dir = os.path.dirname(__file__)
-      file = os.path.join(dir, '../Cache/commands.txt')  # change filename here
+      file = os.path.join(dir, '../cache/commands.txt')  # change filename here
       os.remove(file) 
 except:
       pass

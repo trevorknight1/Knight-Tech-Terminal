@@ -1,6 +1,6 @@
-import terminal.Jumper
-import terminal.GUI
-import terminal.Computers
-import terminal.CMD_OP
-import terminal.Cache
-import terminal.Alias
+import terminal.jumper
+import terminal.gui
+import terminal.computers
+import terminal.cmd_op
+import terminal.cache
+import terminal.alias

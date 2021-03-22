@@ -48,13 +48,13 @@ read -ep " " varname
 
                   cp Knight-Tech-Terminal/bin/alias.sh .bash_aliases
                   dos2unix ./bash_aliases
-                  chmod 777 .bashrc
                   echo "./Knight-Tech-Terminal/main.sh" >> .bashrc
+                  chmod 777 .bashrc
                   clear
                   printf "${Yellow}Knight Tech Terminal Successfully Installed:"
                   printf " ${RED}  Press 1 to ENTER >>"
                   read -ep " " name 
                   if [ "$name" == "1" ]; then
-                    ./Knight-Tech-Terminal/main.sh
+                    /Knight-Tech-Terminal/main.sh
                   fi
             fi

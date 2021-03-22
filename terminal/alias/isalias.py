@@ -15,7 +15,7 @@ def main():
       c = command.strip()
       if c in aliases:
             dir = os.path.dirname(__file__)
-            out_file = os.path.join(dir, '../CMD_OP/cmd.txt')
+            out_file = os.path.join(dir, '../cmd_op/cmd.txt')
             outfile = open(out_file, 'w')
             outfile.write(aliases[c])
             outfile.close()
