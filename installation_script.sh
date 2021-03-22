@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 clear
 
@@ -7,7 +7,6 @@ RED='\033[0;31m'
 Yellow='\033[1;33m' # Yellow
 NC='\033[0m' # No Color
 #---------------------------------------------
-
 
 apt install dos2unix
 printf "${RED}-----------------------------------------------------------------${Yellow}Knight Tech${RED}-----------------------------------------------------------------${NC}\n"
@@ -36,7 +35,7 @@ read -ep " " varname
                   echo -e "\e[32m Installing Knight Tech Terminal:"
 
 
-                                    SOURCE="${BASH_SOURCE[0]}"
+                  SOURCE="${BASH_SOURCE[0]}"
                   while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
                     TARGET="$(readlink "$SOURCE")"
                     if [[ $TARGET == /* ]]; then
@@ -72,13 +71,13 @@ read -ep " " varname
                   pip2 install blessings
                   cd ..
                   apt -y install dos2unix
-                  cp $dir/bin/alias.sh .bash_aliases
-                  dos2unix ./bash_aliases
-                  chmod 777 .bashrc
+                  cp $dir/bin/alias.sh ../.bash_aliases
+                  dos2unix ../.bash_aliases
+                  chmod 777 ../.bashrc
                   echo "DIR is '$DIR'"
-                  echo "$dir/main.sh" >> .bashrc
-                  chmod 777 .bashrc
-                  dos2unix ./Knight-Tech-Terminal/installation_script.sh
+                  echo "$dir/main.sh" >> ../.bashrc
+                  chmod 777 ../.bashrc
+                  dos2unix $dir/installation_script.sh
                   clear
                   printf "${Yellow}Knight Tech Terminal Successfully Installed:"
                   printf " ${RED}  Press 1 to ENTER >>"
