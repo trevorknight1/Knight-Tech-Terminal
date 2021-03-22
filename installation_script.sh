@@ -34,9 +34,9 @@ read -ep " " varname
  # ----------------------------------------
             if [ "$varname" == "1" ]; then
                   echo -e "\e[32m Installing Knight Tech Terminal:"
-                  apt-get update 
-                  apt-get install build-essential checkinstall
-                  apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+                  apt update 
+                  apt install build-essential checkinstall
+                  apt install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
                   wget https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tgz
                   tar xzf Python-2.7.16.tgz
                   cd Python-2.7.16
