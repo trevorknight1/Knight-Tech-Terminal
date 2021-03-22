@@ -43,8 +43,11 @@ read -ep " " varname
                   ./configure --enable-optimizations
                   make altinstall
                   apt -y install python2.7 python-pip
+                  cd ..
+                  cd ./Knight-Tech_Terminal/
                   pip2 install -r requirements.txt
-                  
+                  pip2 install blessings
+                  cd ..
                   apt -y install dos2unix
                   cp ./Knight-Tech-Terminal/bin/alias.sh .bash_aliases
                   dos2unix ./bash_aliases
@@ -56,6 +59,6 @@ read -ep " " varname
                   printf " ${RED}  Press 1 to ENTER >>"
                   read -ep " " name 
                   if [ "$name" == "1" ]; then
-                    /Knight-Tech-Terminal/main.sh
+                    ./Knight-Tech-Terminal/main.sh
                   fi
             fi
