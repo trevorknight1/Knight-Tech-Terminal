@@ -65,26 +65,25 @@ read -ep " " varname
                   make altinstall
                   apt -y install python2.7 python-pip
                   cd ..
-                  cd ./Knight-Tech_Terminal/
+                  cd ./Knight-Tech-Terminal/
                   echo -e "\e[32m ######################################################## Installing Additional Requirements ##############################################################"
                   pip2 install -r requirements.txt
                   pip2 install blessings
                   cd ..
                   apt -y install dos2unix
-                  cp $dir/bin/alias.sh ../.bash_aliases
-                  dos2unix ../.bash_aliases
-                  chmod 777 ../.bashrc
-                  echo "DIR is '$DIR'"
-                  echo "$dir/main.sh" >> ../.bashrc
-                  chmod 777 ../.bashrc
-                  dos2unix $dir/installation_script.sh
+                  cp ~/Knight-Tech-Terminal/bin/alias.sh ../.bash_aliases
+                  dos2unix ~/.bash_aliases
+                  chmod 777 ~/.bashrc
+                  echo "~/Knight-Tech-Terminal/main.sh" >> ~/.bashrc
+                  chmod 777 ~/.bashrc
+                  dos2unix ~/Knight-Tech-Terminal/installation_script.sh
                   clear
                   printf "${Yellow}Knight Tech Terminal Successfully Installed:"
                   printf " ${RED}  Press 1 to ENTER >>"
                   read -ep " " name 
                   if [ "$name" == "1" ]; then
                     echo "Enter Terminal" 
-                    $dir/main.sh
+                    ~/Knight-Tech-Terminal/main.sh
                   fi
             fi
 
