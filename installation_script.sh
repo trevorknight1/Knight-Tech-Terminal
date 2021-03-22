@@ -19,8 +19,8 @@ printf "Otherwise You can run these commands sequentially, in the home directory
 printf "${Yellow}# Step 1: Install python2.7\n"
 printf "${RED} Notice: This version might be different on your computer, this is the python used to run the program. If you don't have python2.7 you need to install it\n" 
 printf "${NC} apt update 
-apt install build-essential checkinstall 
-apt install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev 
+apt -y install build-essential checkinstall 
+apt -y install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev 
 wget https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tgz 
 tar xzf Python-2.7.16.tgz 
 cd Python-2.7.16 
@@ -35,25 +35,26 @@ read -ep " " varname
             if [ "$varname" == "1" ]; then
                   echo -e "\e[32m Installing Knight Tech Terminal:"
                   apt update 
-                  apt install build-essential checkinstall
-                  apt install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+                  apt -y install build-essential checkinstall
+                  apt -y install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
                   wget https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tgz
                   tar xzf Python-2.7.16.tgz
                   cd Python-2.7.16
                   ./configure --enable-optimizations
                   make altinstall
-                  apt install python2.7 python-pip
+                  apt -y install python2.7 python-pip
                   pip2 install -r requirements.txt
                   
 
-                  cp ./bin/alias.sh .bash_aliases
+                  cp Knight-Tech-Terminal/bin/alias.sh .bash_aliases
                   dos2unix ./bash_aliases
-                  echo "./bash_aliases" >> .bashrc
-                  echo "./KnightTechTerminal/main.sh" >> .bashrc
+                  chmod 777 .bashrc
+                  echo "./Knight-Tech-Terminal/main.sh" >> .bashrc
                   clear
-                  printf "${Yellow}Knight Tech Terminal Successfully Installed:${RED}  Press 1 to ENTER >>"
+                  printf "${Yellow}Knight Tech Terminal Successfully Installed:"
+                  printf " ${RED}  Press 1 to ENTER >>"
                   read -ep " " name 
                   if [ "$name" == "1" ]; then
-                    ./KnightTechTerminal/tech.sh
+                    ./Knight-Tech-Terminal/main.sh
                   fi
             fi
