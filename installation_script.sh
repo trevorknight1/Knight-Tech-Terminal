@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 clear
 
@@ -34,6 +34,27 @@ read -ep " " varname
  # ----------------------------------------
             if [ "$varname" == "1" ]; then
                   echo -e "\e[32m Installing Knight Tech Terminal:"
+
+
+                                    SOURCE="${BASH_SOURCE[0]}"
+                  while [ -h "$SOURCE" ]; do # resolve $SOURCE until the file is no longer a symlink
+                    TARGET="$(readlink "$SOURCE")"
+                    if [[ $TARGET == /* ]]; then
+                      echo "SOURCE '$SOURCE' is an absolute symlink to '$TARGET'"
+                      SOURCE="$TARGET"
+                    else
+                      DIR="$( dirname "$SOURCE" )"
+                      echo "SOURCE '$SOURCE' is a relative symlink to '$TARGET' (relative to '$DIR')"
+                      SOURCE="$DIR/$TARGET" # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the symlink file was located
+                    fi
+                  done
+
+                  RDIR="$( dirname "$SOURCE" )"
+                  DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
+                  if [ "$DIR" != "$RDIR" ]; then
+                    echo "DIR '$RDIR' resolves to '$DIR'"
+                  fi
+                  echo "DIR is '$DIR'"
                   apt update 
                   apt -y install build-essential checkinstall
                   apt -y install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
@@ -51,16 +72,11 @@ read -ep " " varname
                   pip2 install blessings
                   cd ..
                   apt -y install dos2unix
-                  cp ./Knight-Tech-Terminal/bin/alias.sh .bash_aliases
-                  echo "Copy Alias file" 
-                  _cwd="$PWD"
-                  echo $_cwd
+                  cp $dir/bin/alias.sh .bash_aliases
                   dos2unix ./bash_aliases
                   chmod 777 .bashrc
-                  echo "Copy to .bashrc" 
-                  _cwd="$PWD"
-                  echo $_cwd
-                  echo "./Knight-Tech-Terminal/main.sh" >> .bashrc
+                  echo "DIR is '$DIR'"
+                  echo "$dir/main.sh" >> .bashrc
                   chmod 777 .bashrc
                   dos2unix ./Knight-Tech-Terminal/installation_script.sh
                   clear
@@ -69,6 +85,11 @@ read -ep " " varname
                   read -ep " " name 
                   if [ "$name" == "1" ]; then
                     echo "Enter Terminal" 
-                    $_cwd/Knight-Tech-Terminal/main.sh
+                    $dir/main.sh
                   fi
             fi
+
+
+
+
+
