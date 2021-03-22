@@ -53,11 +53,13 @@ read -ep " " varname
                   apt -y install dos2unix
                   cp ./Knight-Tech-Terminal/bin/alias.sh .bash_aliases
                   echo "Copy Alias file" 
-                  $PWD
+                  _cwd="$PWD"
+                  echo $_cwd
                   dos2unix ./bash_aliases
                   chmod 777 .bashrc
                   echo "Copy to .bashrc" 
-                  $PWD
+                  _cwd="$PWD"
+                  echo $_cwd
                   echo "./Knight-Tech-Terminal/main.sh" >> .bashrc
                   chmod 777 .bashrc
                   dos2unix ./Knight-Tech-Terminal/installation_script.sh
@@ -67,6 +69,6 @@ read -ep " " varname
                   read -ep " " name 
                   if [ "$name" == "1" ]; then
                     echo "Enter Terminal" 
-                    ./Knight-Tech-Terminal/main.sh
+                    $_cwd/Knight-Tech-Terminal/main.sh
                   fi
             fi
