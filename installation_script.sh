@@ -46,13 +46,18 @@ read -ep " " varname
                   apt -y install python2.7 python-pip
                   cd ..
                   cd ./Knight-Tech_Terminal/
+                  echo -e "\e[32m ######################################################## Installing Additional Requirements ##############################################################"
                   pip2 install -r requirements.txt
                   pip2 install blessings
                   cd ..
                   apt -y install dos2unix
                   cp ./Knight-Tech-Terminal/bin/alias.sh .bash_aliases
+                  echo "Copy Alias file" 
+                  $PWD
                   dos2unix ./bash_aliases
                   chmod 777 .bashrc
+                  echo "Copy to .bashrc" 
+                  $PWD
                   echo "./Knight-Tech-Terminal/main.sh" >> .bashrc
                   chmod 777 .bashrc
                   dos2unix ./Knight-Tech-Terminal/installation_script.sh
@@ -61,6 +66,7 @@ read -ep " " varname
                   printf " ${RED}  Press 1 to ENTER >>"
                   read -ep " " name 
                   if [ "$name" == "1" ]; then
-                    ./main.sh
+                    echo "Enter Terminal" 
+                    ./Knight-Tech-Terminal/main.sh
                   fi
             fi
