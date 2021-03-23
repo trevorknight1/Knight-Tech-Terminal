@@ -42,19 +42,21 @@ read -ep " " varname
                   apt update 
                   apt -y install build-essential checkinstall
                   apt -y install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
-                  echo -e "\e[32m ######################################################## Installing Python 2.7 ##############################################################"
-                  wget https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tgz
-                  tar xzf Python-2.7.16.tgz
+                  echo -e "\e[32m ######################################################## Installing Python 2.7 ############################################################"
+                  if [ ! -f ~/Python-2.7.16 ]; then
+                        wget https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tgz
+                        tar xzf Python-2.7.16.tgz
+                  fi
                   cd ~Python-2.7.16
                   ./configure --enable-optimizations
                   make altinstall
                   apt -y install python2.7 python-pip
                   cd ~/Knight-Tech-Terminal/
-                  echo -e "\e[32m ######################################################## Installing Additional Requirements ##############################################################"
+                  echo -e "\e[32m ######################################################## Installing Additional Requirements ###############################################"
                   pip2 install -r requirements.txt
                   pip2 install blessings
                   cd ..
-                  echo -e "\e[32m ######################################################## Fixing Up Aliases ##############################################################"
+                  echo -e "\e[32m ######################################################## Fixing Up Aliases ################################################################"
                   apt -y install dos2unix
                   cp ~/Knight-Tech-Terminal/bin/bash_aliases.sh ~/.bash_aliases
                   dos2unix ~/.bash_aliases
