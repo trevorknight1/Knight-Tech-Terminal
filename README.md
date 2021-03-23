@@ -1,6 +1,9 @@
 # Knight-Tech-Terminal
 
+This is a shell script driven application that provides a simplified interface on top of your bash terminal. (hobby project)
+
 How to install: <br />
+git clone https://github.com/trevorknight1/Knight-Tech-Terminal.git <br />
 chmod -R 777 ./Knight-Tech-Terminal/ <br />
 sudo ./Knight-Knight-Tech-Terminal/installation_script.sh <br />
 
