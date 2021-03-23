@@ -1,1 +1,1 @@
-{"DESKTOP-TBT8JFD": {"auto": "/mnt/c/Users/Owner/source/repos/KnightTechTerminal", "Home": "/home/knight", "source": "/mnt/c/Users/Owner/source"}}
+{}
