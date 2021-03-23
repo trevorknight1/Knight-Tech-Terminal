@@ -5,7 +5,7 @@ RED='\033[0;31m'
 Yellow='\033[1;33m' # Yellow
 NC='\033[0m' # No Color
 
-bind '"\e[B": "Cache'
+bind '"\e[B": "cache'
 SOURCE="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 clear
 # -----------------GUI FILES---------------------
