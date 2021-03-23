@@ -42,10 +42,11 @@ read -ep " " varname
                   apt update 
                   apt -y install build-essential checkinstall
                   apt -y install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
-                  echo -e "\e[32m ######################################################## Installing Python 2.7 ############################################################"
+                  echo -e "\e[32m ######################################################## Installing Python  ############################################################"
                   if [ ! -f ~/Python-2.7.16 ]; then
                         wget https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tgz
                         tar xzf Python-2.7.16.tgz
+                        rm -rf Python-2.7.16.tgz
                   fi
                   cd ~Python-2.7.16
                   ./configure --enable-optimizations
@@ -60,6 +61,7 @@ read -ep " " varname
                   apt -y install dos2unix
                   cp ~/Knight-Tech-Terminal/bin/bash_aliases.sh ~/.bash_aliases
                   dos2unix ~/.bash_aliases
+                  . ~/.bash_aliases
                   chmod 777 ~/.bashrc
                   echo -e "\e[32m ######################################################## Setting Up Terminal ##############################################################"
                   echo "~/Knight-Tech-Terminal/main.sh" >> ~/.bashrc
