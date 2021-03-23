@@ -6,6 +6,7 @@ How to install: <br />
 git clone https://github.com/trevorknight1/Knight-Tech-Terminal.git <br />
 chmod -R 777 ./Knight-Tech-Terminal/ <br />
 sudo ./Knight-Tech-Terminal/installation_script.sh <br />
+Press 1 ENTER when prompted
 
 
 # Navigation : Jumper
