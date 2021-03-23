@@ -4,7 +4,7 @@ import multiprocessing
 import psutil
 import time
 
-# 2021 Currently Under Construction - Doesn't work - Trevor Knight
+# 2021 Currently Under Construction - Doesn't work - Trevor Knight - Under Development
 
 def startProcess(name, path):
     """
