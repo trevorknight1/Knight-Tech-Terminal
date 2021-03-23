@@ -56,7 +56,7 @@ while [ "$varname" != "quit" ]
             elif [ "$varname" == "create computer" ]; then
                   $CREATE_COMPUTER
                   `python $SOURCE/terminal/cmd_op/get_cmd.py`
-            elif [ "$varname" == "create computer" ]; then
+            elif [ "$varname" == "menu" ]; then
                   $MENU
             elif [ "$varname" == "create jumper" ]; then
                   $CREATE_JUMP

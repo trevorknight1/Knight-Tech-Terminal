@@ -64,10 +64,10 @@ read -ep " " varname
                   chmod 777 ~/.bashrc
                   dos2unix ~/Knight-Tech-Terminal/installation_script.sh
                   
-                  loading="python ~/Knight-Tech-Terminal/terminal/loadingbar.py"
+                  loading="python ./Knight-Tech-Terminal/terminal/loadingbar.py"
                   $loading
                   
-                  MENU="python ~/Knight-Tech-Terminal/terminal/menu.py"
+                  MENU="python ./Knight-Tech-Terminal/terminal/menu.py"
                   $MENU
                   printf "${Yellow}Knight Tech Terminal Successfully Installed:"
                   printf " ${RED}  Press 1 to ENTER >>"
