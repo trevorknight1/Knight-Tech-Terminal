@@ -51,7 +51,9 @@ command = {
     "jumper" : "view: jumper | create: create jumper",
     "ssh VPN/Server" : "view: computers | create: create computer",
     "command cache" : "down arrow",
-    "menu" : "view: menu"
+    "menu" : "view: menu",
+    "exit terminal" : "CTRL C",
+    "re-enter terminal" : "knighttech"
 }
 
 set = 0 
