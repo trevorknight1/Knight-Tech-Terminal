@@ -56,7 +56,7 @@ read -ep " " varname
                   cd ..
                   echo -e "\e[32m ######################################################## Fixing Up Aliases ##############################################################"
                   apt -y install dos2unix
-                  cp ~/Knight-Tech-Terminal/bin/alias.sh ~/.bash_aliases
+                  cp ~/Knight-Tech-Terminal/bin/bash_aliases.sh ~/.bash_aliases
                   dos2unix ~/.bash_aliases
                   chmod 777 ~/.bashrc
                   echo -e "\e[32m ######################################################## Setting Up Terminal ##############################################################"
@@ -73,7 +73,6 @@ read -ep " " varname
                   printf " ${RED}  Press 1 to ENTER >>"
                   read -ep " " name 
                   if [ "$name" == "1" ]; then
-                    echo "Enter Terminal" 
                     ~/Knight-Tech-Terminal/main.sh
                   fi
             fi
