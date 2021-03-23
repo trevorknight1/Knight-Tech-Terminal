@@ -11,6 +11,7 @@ clear
 # -----------------GUI FILES---------------------
 HEADER="python $SOURCE/terminal/gui/header.py"
 FOOTER="python $SOURCE/terminal/gui/exit_footer.py"
+MENU="python $SOURCE/terminal/menu.py"
 # -----------------------------------------------
 # ----------------JUMPER FILES-------------------
 JUMPER="python $SOURCE/terminal/jumper/jumper.py"
@@ -55,6 +56,8 @@ while [ "$varname" != "quit" ]
             elif [ "$varname" == "create computer" ]; then
                   $CREATE_COMPUTER
                   `python $SOURCE/terminal/cmd_op/get_cmd.py`
+            elif [ "$varname" == "create computer" ]; then
+                  $MENU
             elif [ "$varname" == "create jumper" ]; then
                   $CREATE_JUMP
             elif [ "$varname" == "create alias" ]; then

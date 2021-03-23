@@ -13,21 +13,6 @@ printf "${RED}-----------------------------------------------------------------$
 printf "${Yellow}Thank you for using the Knight Tech Terminal. This shell program has many features that will make your terminal experience easier and faster. ${NC}\n"
 echo -e "\e[32m Make sure that your in the home directory, more specifically, where your .bashrc or ./bash_profile lives."
 echo -e "\e[32m Then for Automatic Installation type 1:"
-printf "${Yellow}Follow the installation instructions below and we will be up and running in no time. ${NC}\n"
-printf "Otherwise You can run these commands sequentially, in the home directory of your terminal or the entry point of your terminal.\n"
-printf "${Yellow}# Step 1: Install python2.7\n"
-printf "${RED} Notice: This version might be different on your computer, this is the python used to run the program. If you don't have python2.7 you need to install it\n" 
-printf "${NC} apt update 
-apt -y install build-essential checkinstall 
-apt -y install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev 
-wget https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tgz 
-tar xzf Python-2.7.16.tgz 
-cd Python-2.7.16 
-./configure --enable-optimizations 
-make altinstall \n "
-printf "${Yellow}# Step 2: Install the Program \n"
-printf "${NC} apt install python2.7 python-pip 
-pip2 install -r requirements.txt \n"
 echo -e "\e[32m Type 1 to install:"
 read -ep " " varname 
  # ----------------------------------------
@@ -60,24 +45,30 @@ read -ep " " varname
                   echo -e "\e[32m ######################################################## Installing Python 2.7 ##############################################################"
                   wget https://www.python.org/ftp/python/2.7.16/Python-2.7.16.tgz
                   tar xzf Python-2.7.16.tgz
-                  cd Python-2.7.16
+                  cd ~Python-2.7.16
                   ./configure --enable-optimizations
                   make altinstall
                   apt -y install python2.7 python-pip
-                  cd ..
-                  cd ./Knight-Tech-Terminal/
+                  cd ~/Knight-Tech-Terminal/
                   echo -e "\e[32m ######################################################## Installing Additional Requirements ##############################################################"
                   pip2 install -r requirements.txt
                   pip2 install blessings
                   cd ..
+                  echo -e "\e[32m ######################################################## Fixing Up Aliases ##############################################################"
                   apt -y install dos2unix
-                  cp ~/Knight-Tech-Terminal/bin/alias.sh ../.bash_aliases
+                  cp ~/Knight-Tech-Terminal/bin/alias.sh ~/.bash_aliases
                   dos2unix ~/.bash_aliases
                   chmod 777 ~/.bashrc
+                  echo -e "\e[32m ######################################################## Setting Up Terminal ##############################################################"
                   echo "~/Knight-Tech-Terminal/main.sh" >> ~/.bashrc
                   chmod 777 ~/.bashrc
                   dos2unix ~/Knight-Tech-Terminal/installation_script.sh
                   clear
+                  loading="python ~/Knight-Tech-Terminal/terminal/loadingbar.py"
+                  $loading
+                  clear
+                  MENU="python ~/Knight-Tech-Terminal/terminal/menu.py"
+                  $MENU
                   printf "${Yellow}Knight Tech Terminal Successfully Installed:"
                   printf " ${RED}  Press 1 to ENTER >>"
                   read -ep " " name 
