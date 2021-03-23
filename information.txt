@@ -1,1 +1,1 @@
-{"host": "DESKTOP-TBT8JFD", "today": "2020-01-28"}
+{}
