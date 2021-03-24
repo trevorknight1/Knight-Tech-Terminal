@@ -9,6 +9,7 @@ NC='\033[0m' # No Color
 #---------------------------------------------
 
 apt install dos2unix
+clear
 printf "${RED}-----------------------------------------------------------------${Yellow}Knight Tech${RED}-----------------------------------------------------------------${NC}\n"
 printf "${Yellow}Thank you for using the Knight Tech Terminal. This shell program has many features that will make your terminal experience easier and faster. ${NC}\n"
 echo -e "\e[32m Make sure that your in the home directory, more specifically, where your .bashrc or ./bash_profile lives."
