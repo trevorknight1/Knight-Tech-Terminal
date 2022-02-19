@@ -26,9 +26,9 @@ def jumper_box(name, pwd):
             print('-',end="")
       print("^")
       num = len(name)
-      add = (len(pwd) - num)/2
+      add = int((len(pwd) - num)/2)
       print("^  ", end='')
-      for i in range(0, int(add)):
+      for i in range(0, add):
                   print(' ',end="")
       if (len(name) % 2) == 0:
                   print(' ',end="")
@@ -94,7 +94,7 @@ def print_name(name, length):
       num = len(name)
       add = int((length - num)/2)
       print(arrow + "  ", end='')
-      for i in range(0,int(add)):
+      for i in range(0,add):
                   print(term.blue_on_white(' '),end="")
       if (len(name) % 2) == 0:
                   print(term.blue_on_white(' '),end="")
@@ -163,7 +163,7 @@ for set in jumpsets:
 print(term.white("To remove a jumpsite type \"rm <name>\"" ))
 print(term.white("To remove all jumpsites type \"remove all\"" ))
 select = term.green("Select Jump Site >> " )
-inputf = raw_input(select)
+inputf = input(select)
 
 dir = os.path.dirname(__file__)
 out_file = os.path.join(dir, '../cmd_op/cmd.txt')
