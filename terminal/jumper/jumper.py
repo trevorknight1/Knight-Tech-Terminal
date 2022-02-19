@@ -28,7 +28,7 @@ def jumper_box(name, pwd):
       num = len(name)
       add = (len(pwd) - num)/2
       print("^  ", end='')
-      for i in range(0,add):
+      for i in range(0, int(add)):
                   print(' ',end="")
       if (len(name) % 2) == 0:
                   print(' ',end="")
@@ -92,9 +92,9 @@ def print_top(number, length):
 
 def print_name(name, length):
       num = len(name)
-      add = (length - num)/2
+      add = int((length - num)/2)
       print(arrow + "  ", end='')
-      for i in range(0,add):
+      for i in range(0,int(add)):
                   print(term.blue_on_white(' '),end="")
       if (len(name) % 2) == 0:
                   print(term.blue_on_white(' '),end="")
