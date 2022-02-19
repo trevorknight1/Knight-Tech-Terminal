@@ -3,8 +3,6 @@ import json
 import blessings
 term = blessings.Terminal()
 
-
-
 def get_host(): 
       dir = os.path.dirname(__file__)
       pwd = os.getcwd()
@@ -20,7 +18,7 @@ def main():
       with open(file) as json_file:
             jump_sites = json.load(json_file)
       select = term.green("Name this Jumpsite >> " )
-      input_f = raw_input(select)
+      input_f = input(select)
       host = get_host()
       if host not in jump_sites:
             jump_sites[host] = {}
