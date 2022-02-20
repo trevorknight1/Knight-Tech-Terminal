@@ -65,7 +65,7 @@ def Options():
     th, tw, hp, wp = struct.unpack('HHHH',
         fcntl.ioctl(0, termios.TIOCGWINSZ,
         struct.pack('HHHH', 0, 0, 0, 0)))
-    Menu_1 = term.yellow('For Terminal Tools -> menu')     
+    Menu = term.yellow('For Terminal Tools -> menu')     
     print(Menu,end='')
     
 Options()
