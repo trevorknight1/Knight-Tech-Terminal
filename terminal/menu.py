@@ -64,13 +64,10 @@ max = 0
 for title in command: 
       if len(command[title]) > max:
             max = len(command[title])
-      for text in command[title]:
-            if len(text) > max:
-                  max = len(text)
       count = count + 1
 
 
-boxes_per_line = (tw / (max+8))-1
+boxes_per_line = (tw / (max+8))-2
 if count < boxes_per_line: 
       boxes_per_line = count
 
