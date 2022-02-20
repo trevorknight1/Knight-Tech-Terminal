@@ -66,7 +66,7 @@ for title in command:
             max = len(command[title])
       for text in command[title]:
             if len(command[title][text]) > max:
-                  max = len(command[title][text]
+                  max = len(command[title][text])
       count = count + 1
 
 
