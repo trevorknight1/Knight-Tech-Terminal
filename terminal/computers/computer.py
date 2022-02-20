@@ -26,7 +26,7 @@ def jumper_box(name, pwd):
             print('-',end="")
       print("^")
       num = len(name)
-      add = (len(pwd) - num)/2
+      add = int(len(pwd) - num)/2)
       print("^  ", end='')
       for i in range(0,add):
                   print(' ',end="")
