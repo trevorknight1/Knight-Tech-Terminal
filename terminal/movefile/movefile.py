@@ -22,13 +22,16 @@ def get_host():
 def main():
       select = term.green("Select File To Move >> " )
       input_f = input(select)
-      if os.path.isfile(input_f):
+      if os.path.isfile(join(os.getcwd(), input_f)):
             notice = term.yellow("File Selected")
-      elif os.path.isdir(select):
+      elif os.path.isdir(join(os.getcwd(), input_f)):
             notice = term.yellow("Directory Selected")
       else:
            notice =  term.yellow("not a directory or file")
+           
       print(notice)
+      print(os.path.abspath(join(os.getcwd(), input_f))
+     
   
                         
       
