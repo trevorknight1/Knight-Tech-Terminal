@@ -54,6 +54,7 @@ while [ "$varname" != "quit" ]
                   `python3 $SOURCE/terminal/cmd_op/get_cmd.py`
                   pwd
             elif [ "$varname" == "movefile" ]; then
+                  ls -al
                   $MOVEFILE
                   `python3 $SOURCE/terminal/cmd_op/get_cmd.py`
                   pwd
