@@ -71,7 +71,7 @@ for site in jump_sites[host]:
             max = len(jump_sites[host][site])
       count = count + 1
 
-boxes_per_line = (tw / (max+8))-1
+boxes_per_line = (tw / (max+8))-2
 if count < boxes_per_line: 
       boxes_per_line = count
 
