@@ -51,7 +51,7 @@ read -ep " " varname
                   printf " ${RED}  Press 1 to ENTER >>"
                   read -ep " " name 
                   if [ "$name" == "1" ]; then
-                    ~/Knight-Tech-Terminal/main.sh
+                    /Knight-Tech-Terminal/main.sh
                   fi
             fi
 
