@@ -7,7 +7,7 @@ term = blessings.Terminal()
 
 
 dir = os.path.dirname(__file__)
-jumpfile = os.path.join(dir, 'jumpsites.txt')
+jumpfile = os.path.join(dir, '../jumper/jumpsites.txt')
 
 def get_host(): 
       dir = os.path.dirname(__file__)
