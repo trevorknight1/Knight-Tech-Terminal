@@ -5,6 +5,7 @@ from datetime import datetime
 import json
 import os
 import blessings
+import join from os 
 term = blessings.Terminal()
 
 
