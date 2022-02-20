@@ -60,12 +60,11 @@ def Host_and_Date(json_data):
     print(" " + term.yellow(json_data['today']))
 
 Host_and_Date(json_data)
-print()
 def Options():
     th, tw, hp, wp = struct.unpack('HHHH',
         fcntl.ioctl(0, termios.TIOCGWINSZ,
         struct.pack('HHHH', 0, 0, 0, 0)))
-    Menu = term.yellow('For Terminal Tools -> menu')     
+    Menu = term.yellow('menu')     
     print(Menu,end='')
     
 Options()
