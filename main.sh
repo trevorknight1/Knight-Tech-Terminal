@@ -28,6 +28,9 @@ CREATE_ALIAS="python3 $SOURCE/terminal/alias/new_alias.py"
 COMPUTER="python3 $SOURCE/terminal/computers/computer.py"
 CREATE_COMPUTER="python3 $SOURCE/terminal/computers/new_computer.py"
 # -----------------------------------------------
+# ----------------File Mover-------------------
+MOVEFILE="python3 $SOURCE/terminal/movefile/movefile.py"
+# -----------------------------------------------
 $HEADER
 while [ "$varname" != "quit" ]
       do
@@ -48,6 +51,10 @@ while [ "$varname" != "quit" ]
                   $FOOTER
             elif [ "$varname" == "jumper" ]; then
                   $JUMPER
+                  `python3 $SOURCE/terminal/cmd_op/get_cmd.py`
+                  pwd
+            elif [ "$varname" == "movefile" ]; then
+                  $MOVEFILE
                   `python3 $SOURCE/terminal/cmd_op/get_cmd.py`
                   pwd
             elif [ "$varname" == "computers" ]; then
