@@ -21,8 +21,8 @@ def main():
             computers = json.load(json_file)
       select = term.green("Name this Computer >> " )
       pwds = term.green("This Entry Command >> " )
-      input_f = raw_input(select)
-      pwd = raw_input(pwds)
+      input_f = input(select)
+      pwd = input(pwds)
       host = get_host()
       if host not in computers:
             computers[host] = {}
