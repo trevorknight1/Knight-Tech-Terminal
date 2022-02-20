@@ -147,7 +147,7 @@ for set in jumpsets:
 print(term.white("To remove an alias e type \"rm <name>\"" ))
 print(term.white("To remove all alias type \"remove all\"" ))
 select = term.green("Select alias command >> " )
-input = raw_input(select)
+input = input(select)
 
 dir = os.path.dirname(__file__)
 out_file = os.path.join(dir, '../cmd_op/cmd.txt')
