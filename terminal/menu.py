@@ -35,7 +35,7 @@ def print_top(number, length):
 
 def print_name(name, length):
       num = len(name)
-      add = (length - num)/2
+      add = int(length - num)/2)
       print(arrow + "  ", end='')
       for i in range(0,add):
                   print(term.blue_on_white(' '),end="")
