@@ -19,6 +19,10 @@ def get_host():
             info = json.load(json_file)
       return info['host']
 
-select = term.green("Select File To Move >> " )
+def main():
+      select = term.green("Select File To Move >> " )
+      input_f = input(select)
+main()
+
 
 
