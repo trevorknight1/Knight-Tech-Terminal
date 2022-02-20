@@ -21,11 +21,11 @@ def main():
       select = term.green("Select File To Move >> " )
       input_f = input(select)
       if os.path.isfile(os.path.join(os.getcwd(), input_f)):
-            notice = term.yellow("File Selected")
+            notice = term.yellow("File Selected: os.path.abspath(os.path.join(os.getcwd(), input_f))")
       elif os.path.isdir(os.path.join(os.getcwd(), input_f)):
-            notice = term.yellow("Directory Selected")
+            notice = term.yellow("Directory Selected : " + os.path.abspath(os.path.join(os.getcwd(), input_f)))
       else:
-           notice =  term.yellow("not a directory or file")
+           notice =  term.yellow("not a directory or file: " + os.path.abspath(os.path.join(os.getcwd(), input_f)))
            
       print(notice)
       print(os.path.abspath(os.path.join(os.getcwd(), input_f)))
