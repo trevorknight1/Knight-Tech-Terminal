@@ -1,11 +1,8 @@
 from __future__ import print_function
 import os
-
 from datetime import datetime
 import json
-import os
 import blessings
-import join from os 
 term = blessings.Terminal()
 
 
@@ -23,15 +20,15 @@ def get_host():
 def main():
       select = term.green("Select File To Move >> " )
       input_f = input(select)
-      if os.path.isfile(join(os.getcwd(), input_f)):
+      if os.path.isfile(os.path.join(os.getcwd(), input_f)):
             notice = term.yellow("File Selected")
-      elif os.path.isdir(join(os.getcwd(), input_f)):
+      elif os.path.isdir(os.path.join(os.getcwd(), input_f)):
             notice = term.yellow("Directory Selected")
       else:
            notice =  term.yellow("not a directory or file")
            
       print(notice)
-      print(os.path.abspath(join(os.getcwd(), input_f)))
+      print(os.path.abspath(os.path.join(os.getcwd(), input_f)))
 main()
 
 
