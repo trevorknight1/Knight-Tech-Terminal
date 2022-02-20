@@ -179,7 +179,7 @@ def main():
       
       if inputf in jump_sites[host]:
             outfile.write("cp "+ os.path.abspath(os.path.join(os.getcwd(), input_f) + " " + jump_sites[host][inputf])
-      else:
+      else :
             outfile.write("")
       outfile.close()
      
