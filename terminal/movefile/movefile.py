@@ -23,11 +23,11 @@ def main():
       select = term.green("Select File To Move >> " )
       input_f = input(select)
       if os.path.isfile(input_f):
-            notice = Term.yellow("File Selected)
+            notice = Term.yellow("File Selected")
       elif os.path.isdir(select):
-            notice = Term.yellow("Directory Selected)
+            notice = Term.yellow("Directory Selected")
       else:
-           notice =  Term.yellow("not a directory or file)
+           notice =  Term.yellow("not a directory or file")
       print(notice)
   
                         
