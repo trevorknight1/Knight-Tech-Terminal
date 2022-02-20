@@ -59,6 +59,17 @@ def Host_and_Date(json_data):
       print(" ",end='')
     print(" " + term.yellow(json_data['today']))
 
-
 Host_and_Date(json_data)
+
+def Options():
+    th, tw, hp, wp = struct.unpack('HHHH',
+        fcntl.ioctl(0, termios.TIOCGWINSZ,
+        struct.pack('HHHH', 0, 0, 0, 0)))
+     Menu = term.yellow('For Terminal Tools -> menu')
+    print(Menu,end='')
+    for i in range(0,int(tw/2-len(knight_tech)/2)+4):
+      print(" ",end='')
+    for i in range(0,int(tw/2 - len(knight_tech)/2)+4):
+      print(" ",end='')
+    print(" " + term.yellow(json_data['today']))
 print() 
