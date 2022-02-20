@@ -30,11 +30,7 @@ def main():
            notice =  term.yellow("not a directory or file")
            
       print(notice)
-      print(os.path.abspath(join(os.getcwd(), input_f))
-     
-  
-                        
-      
+      print(os.path.abspath(join(os.getcwd(), input_f)))
 main()
 
 
