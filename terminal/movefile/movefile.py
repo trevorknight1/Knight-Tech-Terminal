@@ -28,6 +28,7 @@ def main():
             notice = Term.yellow("Directory Selected)
       else:
            notice =  Term.yellow("not a directory or file)
+      print(notice)
   
                         
       
