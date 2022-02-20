@@ -29,7 +29,7 @@ def main():
       print(notice)
       
       def jumper_box(name, pwd):
-      print("^", end='')
+            print("^", end='')
       for i in range(0,len(pwd)+4):
             print('-',end="")
       print("^")
@@ -37,9 +37,9 @@ def main():
       add = int((len(pwd) - num)/2)
       print("^  ", end='')
       for i in range(0, add):
-                  print(' ',end="")
+            print(' ',end="")
       if (len(name) % 2) == 0:
-                  print(' ',end="")
+            print(' ',end="")
       print(name,end='')
       for i in range(0,add):
             print(' ',end="")
