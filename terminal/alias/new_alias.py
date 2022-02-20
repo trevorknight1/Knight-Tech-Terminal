@@ -15,7 +15,7 @@ def main():
             jump_sites = json.load(json_file)
       select = term.green("Name this Command >> " )
       cmd = term.green("Type Command >> " )
-      input = raw_input(select)
+      input = input(select)
       input2 = input(cmd)
       jump_sites[input.strip()] = input2
       dir = os.path.dirname(__file__)
