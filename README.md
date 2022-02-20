@@ -4,6 +4,7 @@ This is a shell script driven application that provides a simplified interface o
 
 How to install: <br />
 git clone https://github.com/trevorknight1/Knight-Tech-Terminal.git <br />
+sudo apt-get install python3
 chmod -R 777 ./Knight-Tech-Terminal/ <br />
 sudo ./Knight-Tech-Terminal/installation_script.sh <br />
 Press 1 ENTER when prompted
