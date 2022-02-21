@@ -7,6 +7,8 @@ git clone https://github.com/trevorknight1/Knight-Tech-Terminal.git <br />
 sudo apt-get install python3 <br />
 chmod -R 777 ./Knight-Tech-Terminal/ <br />
 sudo ./Knight-Tech-Terminal/installation_script.sh <br />
+sudo apt install python3-pip <br />
+
 Press 1 ENTER when prompted
 
 
