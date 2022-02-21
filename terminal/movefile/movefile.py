@@ -18,11 +18,13 @@ def get_host():
       return info['host']
 
 def main():
+      isdir1 = false
       select = term.green("Select File To Move >> " )
       input_f = input(select)
       if os.path.isfile(os.path.join(os.getcwd(), input_f)):
             notice = term.yellow("File Selected: " + os.path.abspath(os.path.join(os.getcwd(), input_f)))
       elif os.path.isdir(os.path.join(os.getcwd(), input_f)):
+            isdir1 = true
             notice = term.yellow("Directory Selected : " + os.path.abspath(os.path.join(os.getcwd(), input_f)))
       else:
            notice =  term.yellow("not a directory or file: " + os.path.abspath(os.path.join(os.getcwd(), input_f)))           
@@ -175,10 +177,12 @@ def main():
       dir = os.path.dirname(__file__)
       out_file = os.path.join(dir, '../cmd_op/cmd.txt')
       outfile = open(out_file, 'w')
-
       
       if inputf in jump_sites[host]:
-            outfile.write("cp " + os.path.abspath(os.path.join(os.getcwd(), input_f)) + " " + jump_sites[host][inputf])
+            if isdir1:
+                  outfile.write("cp -R " + os.path.abspath(os.path.join(os.getcwd(), input_f)) + " " + jump_sites[host][inputf])
+            else: 
+                  outfile.write("cp " + os.path.abspath(os.path.join(os.getcwd(), input_f)) + " " + jump_sites[host][inputf])
       else :
             outfile.write("")
       outfile.close()
