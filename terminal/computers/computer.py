@@ -162,7 +162,7 @@ for set in jumpsets:
 print(term.white("To remove a computers type \"rm <name>\"" ))
 print(term.white("To remove all computers type \"remove all\"" ))
 select = term.green("Select a computer >> " )
-input_f = raw_input(select)
+input_f = input(select)
 
 dir = os.path.dirname(__file__)
 out_file = os.path.join(dir, '../cmd_op/cmd.txt')
