@@ -18,7 +18,7 @@ def get_host():
       return info['host']
 
 def main():
-      isdir1 = false
+      isdir1 = False
       select = term.green("Select File To Move >> " )
       input_f = input(select)
       if os.path.isfile(os.path.join(os.getcwd(), input_f)):
