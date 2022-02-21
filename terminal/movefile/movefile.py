@@ -24,7 +24,7 @@ def main():
       if os.path.isfile(os.path.join(os.getcwd(), input_f)):
             notice = term.yellow("File Selected: " + os.path.abspath(os.path.join(os.getcwd(), input_f)))
       elif os.path.isdir(os.path.join(os.getcwd(), input_f)):
-            isdir1 = true
+            isdir1 = True
             notice = term.yellow("Directory Selected : " + os.path.abspath(os.path.join(os.getcwd(), input_f)))
       else:
            notice =  term.yellow("not a directory or file: " + os.path.abspath(os.path.join(os.getcwd(), input_f)))           
