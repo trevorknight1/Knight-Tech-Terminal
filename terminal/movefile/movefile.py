@@ -182,7 +182,7 @@ def main():
             if isdir1:
                   outfile.write("cp -R " + os.path.abspath(os.path.join(os.getcwd(), input_f)) + " " + jump_sites[host][inputf])
             else: 
-                  outfile.write("cp " + os.path.abspath(os.path.join(os.getcwd(), input_f)) + " " + jump_sites[host][inputf])
+                  outfile.write("mv " + os.path.abspath(os.path.join(os.getcwd(), input_f)) + " " + jump_sites[host][inputf])
       else :
             outfile.write("")
       outfile.close()
